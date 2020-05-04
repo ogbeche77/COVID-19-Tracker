@@ -1,17 +1,23 @@
 import React from 'react';
 import styles from './Cards.module.css';
 import { Card, CardContent, Typography, Grid} from '@material-ui/core';
+import CountUp from 'react-countup'; //animation counting
 
-const Cards = (props) => {
-    console.log(props)
+const Cards = ( {data: {confirmed, recovered, deaths, lastUpdate} }) => {
+    if(!confirmed) {
+        return 'Loading....'
 
+    }
     return (
         <div className={styles.container}>
         <Grid container spacing={3} justify="center">
         <Grid item component= {Card}>
         <CardContent>
         <Typography color="textSecondary" gutterBottom> Infected</Typography>
-        <Typography variant="h5">Our Data</Typography>
+    <Typography variant="h5">
+    <CountUp start={0}
+    end={confirmed.value}/>
+    </Typography> {/*.value as named in the api*/}
         <Typography color="textSecondary">Our Date</Typography>
         <Typography variant="body2">Number of Covid-19 active cases</Typography>
         </CardContent>
@@ -20,7 +26,9 @@ const Cards = (props) => {
         <Grid item component= {Card}>
         <CardContent>
         <Typography color="textSecondary" gutterBottom> Recovered</Typography>
-        <Typography variant="h5">Our Data</Typography>
+        <Typography variant="h5">
+        <CountUp start={0}
+    end={recovered.value}/></Typography>
         <Typography color="textSecondary">Our Date</Typography>
         <Typography variant="body2">Number of Recovered Covid-19 patients</Typography>
         </CardContent>
@@ -29,7 +37,9 @@ const Cards = (props) => {
         <Grid item component= {Card}>
         <CardContent>
         <Typography color="textSecondary" gutterBottom> Deaths</Typography>
-        <Typography variant="h5">Our Data</Typography>
+        <Typography variant="h5">
+        <CountUp start={0}
+    end={deaths.value}/></Typography>
         <Typography color="textSecondary">Our Date</Typography>
         <Typography variant="body2">Number of Covid-19 related deaths</Typography>
         </CardContent>
