@@ -1,8 +1,24 @@
 import React from 'react';
+import styles from './Cards.module.css';
+import { Card, CardContent, Typography, Grid} from '@material-ui/core';
 
-const Cards = () => {
+const Cards = (props) => {
+    console.log(props)
+
     return (
-        <h2>My Cards</h2>
+        <div className={styles.container}>
+        <Grid container spacing={3} justify="center">
+        <Grid item component= {Card}>
+        <CardContent>
+        <Typography color="textSecondary" gutterBottom> Infected</Typography>
+        <Typography variant="h5">Our Data</Typography>
+        <Typography color="textSecondary">Our Date</Typography>
+        <Typography variant="body2">Number of Covid-19 active cases</Typography>
+        </CardContent>
+        </Grid>
+        </Grid>
+        
+        </div>
     )
 }
 
