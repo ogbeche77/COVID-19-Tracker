@@ -1,9 +1,12 @@
 body {
-    background-color: rgb(90, 98, 99);
+    background-color: rgb(167, 196, 167);
+    
 }
 
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
+
