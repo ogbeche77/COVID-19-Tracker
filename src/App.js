@@ -28,7 +28,7 @@ export class App extends Component {
         return (
             <div className={styles.container}>
                <Cards data={data}/>
-               <CountryPicker/>
+               <CountryPicker handleCountryChange={this.componentWillMounthandleCountryChange/>
                <Chart/>
             </div>
         )
