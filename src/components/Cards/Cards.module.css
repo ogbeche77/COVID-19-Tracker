@@ -17,3 +17,10 @@
 .deaths{
     border-bottom: 10px solid rgba(97, 21, 29);
 }
+
+@media (max-width:770px) {
+    .card{
+        margin:3% 0 !important;
+    }
+
+}
