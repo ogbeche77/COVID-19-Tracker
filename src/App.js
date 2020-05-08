@@ -11,16 +11,16 @@ export class App extends Component {
 
 
     async componentDidMount() { // async should be before componentDidMount
-        const fetchedData = await fetchData();
+        const data = await fetchData();
 
-        this.setState({ data: fetchedData})
+        this.setState({ data })
     }
 
     handleCountryChange = async (country) => {
-        const fetchedData = await fetchData(country);
+        const data = await fetchData(country);
         
 
-        this.setState({ data: fetchedData, country: country});
+        this.setState({ data, country: country});
 
     }
 
