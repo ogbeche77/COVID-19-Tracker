@@ -10,7 +10,7 @@ export class App extends Component {
     }
 
 
-
+    //async is placed in front of componentDidMount to make it asynchronous ,
     async componentDidMount() { // request to fetch data that has been imported from api.js
         const data = await fetchData();
 
