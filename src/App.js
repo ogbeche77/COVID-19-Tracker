@@ -11,7 +11,7 @@ export class App extends Component {
 
 
 
-    async componentDidMount() { // async should be before componentDidMount
+    async componentDidMount() { // request to fetch data that has been imported from api.js
         const data = await fetchData();
 
         this.setState({ data })
