@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Cards.module.css';
 import { Card, CardContent, Typography, Grid} from '@material-ui/core'; //used for creating the cards
 import CountUp from 'react-countup'; //animation counting
-import cx from 'classnames';
+import cx from 'classnames'; //links classes together, we can apply multiple class on an item
 
 const Cards = ({data: {confirmed, recovered, deaths, lastUpdate} }) => {
     if(!confirmed) { //To check if data isn't yet fetched from api
