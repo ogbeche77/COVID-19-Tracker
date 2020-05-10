@@ -5,7 +5,7 @@ import CountUp from 'react-countup'; //animation counting
 import cx from 'classnames';
 
 const Cards = ({data: {confirmed, recovered, deaths, lastUpdate} }) => {
-    if(!confirmed) {
+    if(!confirmed) { //To check if data isn't yet fetched from api
         return 'Loading....'
 
     }
