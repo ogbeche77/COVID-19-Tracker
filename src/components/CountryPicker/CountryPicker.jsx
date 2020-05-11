@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { NativeSelect, FormControl } from '@material-ui/core'; //used for creating country picker
+import React, { useState, useEffect } from 'react'; //Effect hooks
+import { NativeSelect, FormControl } from '@material-ui/core'; //Enables us to select a country
 import styles from './CountryPicker.module.css';
 import {fetchCountries } from '../../api';
 
