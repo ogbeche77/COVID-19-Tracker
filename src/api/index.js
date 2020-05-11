@@ -2,7 +2,8 @@ import axios from 'axios';
 
 const url = 'https://covid19.mathdro.id/api';
 //Api call, only needed object are selected
-//Cards
+
+//Api function for Cards
 export const fetchData = async (country) => {
     let changeableUrl = url;
 
@@ -21,7 +22,7 @@ export const fetchData = async (country) => {
     }
 }
 
-//Charts
+//Api function for Charts
 export const fetchDailyData = async () =>{
 try {
     const { data } = await axios.get(`${url}/daily`); // fetching dailt data
