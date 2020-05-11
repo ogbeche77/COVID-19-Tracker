@@ -3,7 +3,7 @@ import axios from 'axios';
 const url = 'https://covid19.mathdro.id/api';
 //Api call, only needed object are selected
 
-//Api function for Cards.jsx
+//Api function for Cards.jsx & country when selected in Form control
 export const fetchData = async (country) => {
     let changeableUrl = url;
 
