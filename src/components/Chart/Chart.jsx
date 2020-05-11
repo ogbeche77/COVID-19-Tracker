@@ -35,7 +35,7 @@ const Chart = ({ data: {confirmed, recovered, deaths}, country }) => {
     }}
         />) : null 
     );
-
+        //labels, dataset etc  synthax from chart.js documentation
         const barChart = (
         confirmed ? (
             <Bar
