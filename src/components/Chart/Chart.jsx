@@ -13,7 +13,7 @@ const Chart = ({ data: {confirmed, recovered, deaths}, country }) => {
         } 
 
         fetchAPI();
-    }, []);
+    }, []); //2nd argument, the empty bracket ensures useEffect is called only when component mounts
 
     const lineChart = (
         dailyData.length ? (
