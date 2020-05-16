@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'; //Effect Hooks enables us to create side effects without creating a CBC
 import { fetchDailyData } from '../../api';
-import { Line, Bar } from 'react-chartjs-2';
+import { Line, Bar } from 'react-chartjs-2'; //both chart.js & react-chartjs2 is need as dependencies
 import styles from './Chart.module.css';
 
 const Chart = ({ data: {confirmed, recovered, deaths}, country }) => {
