@@ -3,6 +3,8 @@ import {Cards, Chart, CountryPicker} from './components'
 import styles from './App.module.css';
 import { fetchData } from './api'; //To call function from index/api.js
 import image from './images/image1.jpg';
+
+
 export class App extends Component {
     state = {
         data: {},
