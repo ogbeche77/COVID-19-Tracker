@@ -12,7 +12,7 @@ const CountryPicker = ({ handleCountryChange }) => {
 
         }
 
-        fetchAPI();
+ fetchAPI();
     }, [setFetchedCountries]);
     
 
