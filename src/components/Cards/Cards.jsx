@@ -6,7 +6,7 @@ import cx from 'classnames'; //links classes together, we can apply multiple cla
 
 const Cards = ({data: {confirmed, recovered, deaths, lastUpdate} }) => {
     if(!confirmed) { //To check if data isn't yet fetched from api
-        return 'Page Loading..'
+        return 'Page Loading...'
 
     }
     return (
