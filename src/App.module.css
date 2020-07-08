@@ -12,7 +12,7 @@ body {
 
 .image{
     width: 400px;
-    margin-top: 12px;
+    margin-top: 14px;
 }
 
 @media (max-width:770px) {
