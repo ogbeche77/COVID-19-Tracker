@@ -30,7 +30,7 @@ export class App extends Component {
 
 
     render() {
-        const { data, country } = this.state;
+        const { data, country } = this.state; //destructured 
 
         return (
             <div className={styles.container}>
