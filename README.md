@@ -1,3 +1,7 @@
+<p float="left">
+ <img src="img/img6.jpg" alt="projects" width="400">
+</p>
+
 # Project Name
 
 > Covid 19 Tracker
