@@ -1,5 +1,5 @@
-<p float="left">
- <img src="img/img6.jpg" alt="projects" width="400">
+<p float="center">
+ <img src="img/img6.jpg" alt="projects" height="100" width="1400">
 </p>
 
 # Project Name
