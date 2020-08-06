@@ -1,4 +1,4 @@
- <img src="img/img7.png" alt="projects">
+ <img src="img/img7.png" alt="screenshot">
 
 # Project Name
 
