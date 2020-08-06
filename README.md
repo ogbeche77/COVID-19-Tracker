@@ -1,6 +1,4 @@
-<p float="center">
- <img src="img/img6.jpg" alt="projects" height="100" width="1400">
-</p>
+ <img src="img/img6.jpg" alt="projects">
 
 # Project Name
 
