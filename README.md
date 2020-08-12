@@ -49,8 +49,8 @@ Project is:completed
 - Open any of the Javascriit file and add the explanation of any line of code as a comment line
 - Commit changes with a meaningful commit message
 - Create a pull request.
-- Relax while your pull request is reviewed and merged.
+- Wait for your PR to be reviewed and merged.
 
 ## Contact
 
-Created by [@ogbeche77](ogbeche77@yahoo.com)
+Created by (ogbeche77@yahoo.com)
