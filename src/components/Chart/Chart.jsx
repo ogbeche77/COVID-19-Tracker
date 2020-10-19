@@ -10,32 +10,11 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
         const fetchAPI = async () => {
             const initialDailyData = await fetchDailyData();
             setDailyData(initialDailyData);
-        }
+        };
 
         fetchAPI();
     }, []); //2nd argument, the empty bracket ensures useEffect is called only when component mounts
 
-    const lineChart = (
-        dailyData.length ? (
-            <Line
-                data={{
-                    labels: dailyData.map(({ date }) => date),
-                    datasets: [{
-                        data: dailyData.map(({ confirmed }) => confirmed),
-                        label: "Infected",
-                        borderColor: "rgba(111, 166, 232)",
-                        fill: true,
-                    },
-                    {
-                        data: dailyData.map(({ deaths }) => deaths),
-                        label: "Deaths",
-                        borderColor: "rgba(97, 21, 29)",
-                        fill: true,
-                    }],
-                }}
-            />) : null
-    );
-    //labels, dataset etc  synthax from chart.js documentation
     const barChart = (
         confirmed ? (
             <Bar
@@ -44,8 +23,9 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
                     datasets: [{
                         label: "People",
                         backgroundColor: ["rgba(111, 166, 232)", "rgba(133, 242, 131)", "rgba(97, 21, 29)"],
-                        data: [confirmed.value, recovered.value, deaths.value]
-                    }]
+                        data: [confirmed.value, recovered.value, deaths.value],
+                    },
+                    ],
 
 
                 }}
@@ -56,7 +36,30 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
                 }}
             />
         ) : null
-    )
+    );
+
+    const lineChart = (
+        dailyData[0] ? (
+            <Line
+                data={{
+                    labels: dailyData.map(({ date }) => date),
+                    datasets: [{
+                        data: dailyData.map((data) => data.confirmed),
+                        label: "Infected",
+                        borderColor: "rgba(111, 166, 232)",
+                        fill: true,
+                    },
+                    {
+                        data: dailyData.map((data) => data.deaths),
+                        label: "Deaths",
+                        borderColor: "rgba(97, 21, 29)",
+                        fill: true,
+                    }],
+                }}
+            />) : null
+    );
+    //labels, dataset etc  synthax from chart.js documentation
+
     return (
         <div className={styles.container}>
             {country ? barChart : lineChart}
