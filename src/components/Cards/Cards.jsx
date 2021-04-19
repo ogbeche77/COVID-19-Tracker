@@ -1,8 +1,13 @@
 import React from "react";
 import styles from "./Cards.module.css";
-import { Card, CardContent, Typography, Grid } from "@material-ui/core"; //used for creating the cards
-import CountUp from "react-countup"; //animation counting
-import cx from "classnames"; //links classes together, we can apply multiple class on an item
+import { Card, CardContent, Typography, Grid } from "@material-ui/core";
+import CountUp from "react-countup";
+import cx from "classnames";
+import {
+  cyInfectedDashBoard,
+  cyRecoveredDashBoard,
+  cyDeathDashBoard,
+} from "../../handles/index.js";
 
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   if (!confirmed) {
@@ -25,12 +30,14 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               Infected
             </Typography>
             <Typography variant="h5">
-              <CountUp
-                start={0}
-                end={confirmed.value}
-                duration={2.2}
-                separator=","
-              />
+              <div data-cy={cyInfectedDashBoard}>
+                <CountUp
+                  start={0}
+                  end={confirmed.value}
+                  duration={2.2}
+                  separator=","
+                />
+              </div>
             </Typography>{" "}
             <Typography color="textSecondary">
               {new Date(lastUpdate).toDateString()}
@@ -55,12 +62,14 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               Recovered
             </Typography>
             <Typography variant="h5">
-              <CountUp
-                start={0}
-                end={recovered.value}
-                duration={2.2}
-                separator=","
-              />
+              <div data-cy={cyRecoveredDashBoard}>
+                <CountUp
+                  start={0}
+                  end={recovered.value}
+                  duration={2.2}
+                  separator=","
+                />
+              </div>
             </Typography>
             <Typography color="textSecondary">
               {new Date(lastUpdate).toDateString()}
@@ -85,12 +94,14 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               Deaths
             </Typography>
             <Typography variant="h5">
-              <CountUp
-                start={0}
-                end={deaths.value}
-                duration={2.2}
-                separator=","
-              />
+              <div data-cy={cyDeathDashBoard}>
+                <CountUp
+                  start={0}
+                  end={deaths.value}
+                  duration={2.2}
+                  separator=","
+                />
+              </div>
             </Typography>
             <Typography color="textSecondary">
               {new Date(lastUpdate).toDateString()}
