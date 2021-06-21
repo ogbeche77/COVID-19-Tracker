@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div>
+  <WithStyles(ForwardRef(Typography))
+    color="textSecondary"
+  >
+     
+    © 
+    2021
+     Copyright:
+  </WithStyles(ForwardRef(Typography))>
+</div>
+`;
