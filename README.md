@@ -27,11 +27,13 @@ Users are able to track the number of people infected, recovered as well as dece
 - axios - version 0.19.2
 - chart.js - version 2.9.3
 - classnames - version 2.2.6
-- react - version 16.13.1
+- react - version 17.0.2
 - react-chartjs-2 - version 2.9.0
 - react-countup - version 4.3.3
-- react-dom - version 16.13.1
+- react-dom - version 17.0.2
 - react-scripts - version 3.4.1
+- enzyme - version3.11.0
+- cypress - version 7.5.0
 
 ## Setup
 
