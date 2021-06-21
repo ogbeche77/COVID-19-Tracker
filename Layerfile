@@ -14,7 +14,7 @@ COPY . .
 RUN npm install
 RUN BACKGROUND npm start
 
-npm test
+RUN npm test
 
 # Create a unique link to share the app in this runner.
 # Every time someone clicks the link, we'll wake up this staging server.
