@@ -1,29 +1,21 @@
+#This is an example LayerCI configuration for React!
 FROM vm/ubuntu:18.04
 
-# install docker-ce (from tutorial for ubuntu)
-RUN apt-get update && \
-    apt-get install apt-transport-https ca-certificates curl software-properties-common && \
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
-    add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable" && \
-    apt-get update && \
-    apt install docker-ce awscli
+# To note: Layerfiles create entire VMs, *not* containers!
 
-# install docker compose
-RUN curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && \
-    chmod +x /usr/local/bin/docker-compose
+RUN curl -fSsL https://deb.nodesource.com/setup_12.x | bash && \
+    apt-get install nodejs python3 make gcc build-essential
 
-# copy the root (i.e., repository root) to /root in the runner
-COPY / /root
+# node is a memory hog
+MEMORY 2G
+ENV NODE_OPTIONS=--max-old-space-size=8192
 
+COPY . .
+RUN npm install
+RUN BACKGROUND npm start
 
+RUN npx cypress run
 
-RUN REPEATABLE docker-compose build --parallel
-RUN docker-compose up -d
-
-RUN docker-compose exec cypress bash /app/run_tests.sh
-# BUTTON shows a button and pauses the pipeline until it is pressed.
-BUTTON Deploy this pipeline
-
-RUN echo "For AWS the command might look like this:"
-RUN echo awscli deploy --template-file my-file.yaml
-RUN echo "Note that these commands only run if you click the button on the LayerCI dashboard."
+# Create a unique link to share the app in this runner.
+# Every time someone clicks the link, we'll wake up this staging server.
+EXPOSE WEBSITE http://localhost:3000
