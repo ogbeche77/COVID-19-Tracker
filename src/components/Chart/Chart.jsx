@@ -1,7 +1,13 @@
-import React, { useState, useEffect } from "react"; //Effect Hooks enables us to create side effects without creating a CBC
+import React, { useState, useEffect } from "react";
 import { fetchDailyData } from "../../api";
-import { Line, Bar } from "react-chartjs-2"; //both chart.js & react-chartjs2 is need as dependencies
-import styles from "./Chart.module.css";
+import { Line, Bar } from "react-chartjs-2";
+import styled from "styled-components";
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 82%;
+`;
 
 const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
   const [dailyData, setDailyData] = useState({});
@@ -61,9 +67,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
   ) : null;
   //labels, dataset etc  synthax from chart.js documentation
 
-  return (
-    <div className={styles.container}>{country ? barChart : lineChart}</div>
-  );
+  return <Container>{country ? barChart : lineChart}</Container>;
 };
 
 export default Chart;
