@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Card, CardContent, Typography, Grid } from "@material-ui/core";
-import CountUp from "react-countup";
 
 import {
   cyInfectedDashBoard,
@@ -47,12 +46,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                 </Typography>
                 <Typography variant="h5">
                   <div data-cy={cyInfectedDashBoard}>
-                    <CountUp
-                      start={0}
-                      end={confirmed.value}
-                      duration={2.2}
-                      separator=","
-                    />
+                    {new Intl.NumberFormat().format(confirmed.value)}
                   </div>
                 </Typography>{" "}
                 <Typography color="textSecondary">
@@ -74,12 +68,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                 </Typography>
                 <Typography variant="h5">
                   <div data-cy={cyRecoveredDashBoard}>
-                    <CountUp
-                      start={0}
-                      end={recovered.value}
-                      duration={2.2}
-                      separator=","
-                    />
+                    {new Intl.NumberFormat().format(recovered.value)}
                   </div>
                 </Typography>
                 <Typography color="textSecondary">
@@ -101,12 +90,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                 </Typography>
                 <Typography variant="h5">
                   <div data-cy={cyDeathDashBoard}>
-                    <CountUp
-                      start={0}
-                      end={deaths.value}
-                      duration={2.2}
-                      separator=","
-                    />
+                    {new Intl.NumberFormat().format(deaths.value)}
                   </div>
                 </Typography>
                 <Typography color="textSecondary">
