@@ -29,10 +29,10 @@ const DeathWrapper = styled.div`
   border-bottom: 12px solid rgba(97, 21, 29);
 `;
 
-const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
-  if (!confirmed) {
-    return "Page Loading...";
-  }
+const Cards = (props) => {
+  const {
+    data: { confirmed, recovered, deaths, lastUpdate },
+  } = props;
   return (
     <Container>
       <Grid container spacing={3} justify="center">
