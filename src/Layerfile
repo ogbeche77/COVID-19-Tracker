@@ -1,0 +1,3 @@
+FROM /Layerfile
+
+EXPOSE WEBSITE http://localhost:3000/COVID-19-Tracker
