@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Card, CardContent, Typography, Grid } from "@material-ui/core";
-import CountUp from "react-countup";
 
 import {
   cyInfectedDashBoard,
@@ -29,10 +28,10 @@ const DeathWrapper = styled.div`
   border-bottom: 12px solid rgba(97, 21, 29);
 `;
 
-const Cards = (props) => {
-  const {
-    data: { confirmed, recovered, deaths, lastUpdate },
-  } = props;
+const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
+  if (!confirmed) {
+    return "Page Loading...";
+  }
   return (
     <Container>
       <Grid container spacing={3} justify="center">
@@ -47,12 +46,7 @@ const Cards = (props) => {
                 </Typography>
                 <Typography variant="h5">
                   <div data-cy={cyInfectedDashBoard}>
-                    <CountUp
-                      start={0}
-                      end={confirmed.value}
-                      duration={2.2}
-                      separator=","
-                    />
+                    {new Intl.NumberFormat().format(confirmed.value)}
                   </div>
                 </Typography>{" "}
                 <Typography color="textSecondary">
@@ -74,12 +68,7 @@ const Cards = (props) => {
                 </Typography>
                 <Typography variant="h5">
                   <div data-cy={cyRecoveredDashBoard}>
-                    <CountUp
-                      start={0}
-                      end={recovered.value}
-                      duration={2.2}
-                      separator=","
-                    />
+                    {new Intl.NumberFormat().format(recovered.value)}
                   </div>
                 </Typography>
                 <Typography color="textSecondary">
@@ -101,12 +90,7 @@ const Cards = (props) => {
                 </Typography>
                 <Typography variant="h5">
                   <div data-cy={cyDeathDashBoard}>
-                    <CountUp
-                      start={0}
-                      end={deaths.value}
-                      duration={2.2}
-                      separator=","
-                    />
+                    {new Intl.NumberFormat().format(deaths.value)}
                   </div>
                 </Typography>
                 <Typography color="textSecondary">

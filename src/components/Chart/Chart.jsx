@@ -9,11 +9,7 @@ const Container = styled.div`
   width: 82%;
 `;
 
-const Chart = (props, country) => {
-  const {
-    data: { confirmed, recovered, deaths },
-  } = props;
-
+const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
   const [dailyData, setDailyData] = useState({});
 
   useEffect(() => {
@@ -43,7 +39,7 @@ const Chart = (props, country) => {
       }}
       options={{
         legend: { display: false },
-        title: { display: true, text: `Current state in ${props.country}` },
+        title: { display: true, text: `Current state in ${country}` },
       }}
     />
   ) : null;
