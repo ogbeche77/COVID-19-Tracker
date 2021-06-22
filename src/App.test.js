@@ -1,8 +1,8 @@
+/* eslint-disable no-undef */
 import React from "react";
 import App from "./App";
 import { Cards } from "./components";
 import { shallow } from "enzyme";
-
 
 describe("App", () => {
   let appWrapper;
