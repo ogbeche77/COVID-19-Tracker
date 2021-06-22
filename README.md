@@ -44,6 +44,8 @@ Users are able to track the number of people infected, recovered as well as dece
 
    `npx cypress run` **_to run integration test_**,
 
+   `npm run lint` **_to run linter_**,
+
 ## Status
 
 Project is:completed
