@@ -1,5 +1,3 @@
-
-
 # Project Name
 
 > Covid 19 Tracker

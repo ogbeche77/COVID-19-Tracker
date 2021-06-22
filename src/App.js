@@ -10,7 +10,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  ${(props) => `background: rgb(167, 196, 167)`}
+  ${() => `background: rgb(167, 196, 167)`}
 `;
 
 const ImageWrapper = styled.div`
