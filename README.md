@@ -8,7 +8,7 @@
 
 - [General info](#general-info)
 - [Technologies](#technologies)
-- [Setup](#setup)
+- [How to run the app](#setup)
 - [Status](#status)
 - [How to improve the project](#how-to-improve-the-project)
 - [Contact](#contact)
@@ -35,10 +35,16 @@ Users are able to track the number of people infected, recovered as well as dece
 - enzyme - version3.11.0
 - cypress - version 7.5.0
 
-## Setup
+## How to run the app
 
-IDE used was Visual Studio Code. The application can run locally on localhost 3000. It is also currently deployed on heroku https://ogbeche77.github.io/COVID-19-Tracker/
-All necessary dependencies were installed, as seen in package.json
+2. Run:
+   `npm install`,
+
+   `npm start` **_to start the application_**,
+
+   `npm test` **_to run unit test_**,
+
+   `npx cypress run` **_to run integration test_**,
 
 ## Status
 
@@ -52,7 +58,3 @@ Project is:completed
 - Commit changes with a meaningful commit message
 - Create a pull request.
 - Wait for your PR to be reviewed and merged.
-
-## Contact
-
-[ogbeche77](https://github.com/ogbeche77)
