@@ -10,7 +10,12 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  ${() => `background: rgb(167, 196, 167)`}
+  background-attachment: fixed;
+  ${() => `background-image: linear-gradient(
+    to bottom,
+    rgb(114, 114, 186),
+    rgb(170, 232, 232)
+  )`}
 `;
 
 const ImageWrapper = styled.div`
