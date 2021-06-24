@@ -1,32 +1,17 @@
 import React from "react";
-import styled from "styled-components";
 import { Card, CardContent, Typography, Grid } from "@material-ui/core";
-
+import {
+  Container,
+  CardWrapper,
+  InfectedWrapper,
+  RecoveredWrapper,
+  DeathWrapper,
+} from "./Cards.elements";
 import {
   cyInfectedDashBoard,
   cyRecoveredDashBoard,
   cyDeathDashBoard,
 } from "../../handles/index.js";
-
-const Container = styled.div`
-  margin: 50px 0;
-`;
-
-const CardWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
-const InfectedWrapper = styled.div`
-  border-bottom: 12px solid rgba(111, 166, 232);
-`;
-const RecoveredWrapper = styled.div`
-  border-bottom: 12px solid rgba(133, 242, 131);
-`;
-
-const DeathWrapper = styled.div`
-  border-bottom: 12px solid rgba(97, 21, 29);
-`;
 
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   if (!confirmed) {
