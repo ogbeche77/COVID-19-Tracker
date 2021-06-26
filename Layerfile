@@ -15,6 +15,7 @@ RUN npm install
 RUN BACKGROUND npm start
 
 RUN npm test
+RUN npx cypress run
 RUN npm run lint
 
 # Create a unique link to share the app in this runner.
