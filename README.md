@@ -14,7 +14,7 @@
 ## General info
 
 About
-Users are able to track the number of people infected, recovered as well as deceased from the Covid-19 disease. The data used in this project was fetched from an open source external API. Real time app built with ReactJS, Material UI & ChartJS. This project also has a Continious Integration and Continious Delivery Process
+Users are able to track the number of people infected, recovered as well as deceased from the Covid-19 disease. The data used in this project was fetched from an open source external API. Real time app built with ReactJS, Material UI & ChartJS. This project also has a CI/CD process, enabled by LayerCI
 
 ## Technologies
 
