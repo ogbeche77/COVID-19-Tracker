@@ -4,7 +4,7 @@ import App from "./App";
 import { Cards } from "./components";
 import { shallow } from "enzyme";
 
-describe("App", () => {
+describe("App Component", () => {
   let appWrapper;
   beforeAll(() => {
     appWrapper = shallow(<App />);
@@ -29,7 +29,7 @@ describe("App", () => {
     expect(appState.data).toBeDefined();
   });
 
-  it("Check that data property is passed to Card component", () => {
+  it("Check that data props is passed successfully to Card component", () => {
     const cards = appWrapper.find(Cards);
     expect(cards.props().data).toEqual(appWrapper.state().data);
   });

@@ -5,6 +5,8 @@ import Cards from "./Cards";
 import { CardContent, Typography, Grid } from "@material-ui/core";
 
 describe("Card Component", () => {
+  //AAA concept
+  //Arrange
   const cardProps = {
     data: {
       confirmed: 10,
@@ -13,12 +15,12 @@ describe("Card Component", () => {
       lastUpdate: "today",
     },
   };
-
+  //Act
   let cardComponent;
   beforeAll(() => {
     cardComponent = shallow(<Cards {...cardProps} />);
   });
-
+  //Assert
   it("renders Grid element in card component", () => {
     const cardGrid = cardComponent.find(Grid);
     expect(cardGrid).toHaveLength(4);
