@@ -46,7 +46,7 @@ Users are able to track the number of people infected, recovered as well as dece
 
 ## Status
 
-Project is:completed
+Project is:completed (Can still be improved on)
 
 ## How to improve the project
 
