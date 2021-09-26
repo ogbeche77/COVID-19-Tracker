@@ -27,7 +27,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               <CardContent>
                 <Typography color="textSecondary" gutterBottom>
                   {" "}
-                  Infectededed
+                  Infected
                 </Typography>
                 <Typography variant="h5">
                   <div data-cy={cyInfectedDashBoard}>
