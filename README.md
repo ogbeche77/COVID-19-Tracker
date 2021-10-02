@@ -1,6 +1,6 @@
 # Project Name
 
-> Covid 19 Tracker
+> Covid 19 Tracker App
 
 ## Table of contents
 
